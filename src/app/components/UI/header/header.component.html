@@ -1,0 +1,27 @@
+<h1>GitHub Users Search</h1>
+<div class="bth-group">
+  <a
+    routerLink="/blocks"
+    [ngClass]="{
+      'btn-primary': isActive('/blocks'),
+      'btn-secondary': !isActive('/blocks')
+    }"
+    class="btn"
+    tabindex="-1"
+    role="button"
+    aria-disabled="true"
+    >Blocks</a
+  >
+  <a
+    routerLink="/tables"
+    [ngClass]="{
+      'btn-primary': isActive('/tables'),
+      'btn-secondary': !isActive('/tables')
+    }"
+    class="btn"
+    tabindex="-1"
+    role="button"
+    aria-disabled="true"
+    >Tables</a
+  >
+</div>

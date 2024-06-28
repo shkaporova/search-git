@@ -1,0 +1,17 @@
+<app-input (searchEvent)="search($event)"></app-input>
+<div *ngIf="isLoading && !beforeLoading" class="loading">Loading...</div>
+<ng-container *ngIf="!isLoading || beforeLoading">
+  <ng-container *ngIf="users.length > 0; else noResults">
+    <h2>Search Results: {{ users.length }} Users Found</h2>
+    <div class="blocks">
+      <ng-container *ngFor="let user of users">
+        <app-block [user]="user"></app-block>
+      </ng-container>
+    </div>
+  </ng-container>
+  <ng-template #noResults>
+    <div *ngIf="beforeLoading">
+      No users found. Please try a different search.
+    </div>
+  </ng-template>
+</ng-container>

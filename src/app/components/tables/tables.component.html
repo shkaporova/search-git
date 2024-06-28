@@ -1,0 +1,29 @@
+<app-input (searchEvent)="search($event)"></app-input>
+<div *ngIf="isLoading && !beforeLoading" class="loading">Loading...</div>
+<table class="table" *ngIf="!isLoading || beforeLoading">
+  <thead *ngIf="users.length > 0">
+    <tr>
+      <th scope="col" style="width: 10%">Avatar</th>
+      <th scope="col" style="width: 65%">Login</th>
+      <th scope="col" style="width: 25%">Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngIf="users.length > 0; else noResults">
+      <tr *ngFor="let user of users">
+        <td><img [src]="user.avatar_url" alt="Avatar" width="50" /></td>
+        <td>{{ user.login }}</td>
+        <td>
+          <a [routerLink]="['/detail', user.login]" class="btn btn-primary"
+            >View Details</a
+          >
+        </td>
+      </tr>
+    </ng-container>
+    <ng-template #noResults>
+      <tr *ngIf="beforeLoading">
+        <td colspan="3">No users found. Please try a different search.</td>
+      </tr>
+    </ng-template>
+  </tbody>
+</table>

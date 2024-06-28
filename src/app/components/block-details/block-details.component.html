@@ -1,0 +1,10 @@
+<div class="card mb-3">
+  <img [src]="user.avatar_url" class="card-img-top" alt="Avatar" />
+  <div class="card-body">
+    <h5 class="card-title">{{ user.login }}</h5>
+    <p class="card-text">Type: {{ user.type }}</p>
+    <a [href]="user.html_url" class="btn btn-primary" target="_blank"
+      >Go to Profile</a
+    >
+  </div>
+</div>
