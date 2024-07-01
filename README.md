@@ -89,15 +89,15 @@ search-git/
 ├── src/
 │ ├── app/
 │ │ ├── components/
-│ │ │ │──block/
+│ │ │ ├── block/
 │ │ │ │ ├── block.component.ts
 │ │ │ │ ├── block.component.html
 │ │ │ │ ├── block.component.scss
-│ │ │ │──block-details/
+│ │ │ ├── block-details/
 │ │ │ │ ├── block-details.component.ts
 │ │ │ │ ├── block-details.component.html
 │ │ │ │ ├── block-details.component.scss
-│ │ │ │──blocks/
+│ │ │ ├── blocks/
 │ │ │ │ ├── blocks.component.ts
 │ │ │ │ ├── blocks.component.html
 │ │ │ │ ├── blocks.component.scss
