@@ -2,26 +2,142 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.2.
 
-## Development server
+## Description
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+SearchGit is an Angular application that allows users to search for GitHub users. It supports sign-in via email/password, GitHub OAuth, and handles user authentication.
 
-## Code scaffolding
+## Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Sign in with email/password
+- Sign up with email/password
+- Sign in with GitHub
+- Search GitHub users and display search results
+
+## Setup Instructions
+
+To get started with the project, follow these steps:
+
+1. **Clone the repository**:
+
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
+   ```
+
+2. **Navigate to the project directory**:
+
+   ```bash
+   cd YOUR_REPOSITORY
+   ```
+
+3. **Install dependencies:**:
+
+   ```bash
+   npm install
+   ```
+
+4. **Set up environment.ts with Your Firebase Configuration:**
+
+   Open src/environments/environment.ts and replace the placeholder values with your actual Firebase configuration. If the file does not exist, create it based on the environment.ts template and add your configuration.
+
+5. **Start the application:**
+
+   ```bash
+   npm start
+   ```
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+To build the project for production, use:
 
-## Running unit tests
+```bash
+ng build
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Running Unit Tests
 
-## Running end-to-end tests
+To execute the unit tests, run:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```bash
+ng test
+```
 
-## Further help
+## Further Help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+For more help on the Angular CLI, use:
+
+```bash
+ng help
+```
+
+### Key Changes and Additions
+
+1. **Added "Description" section**: Explains what the application does.
+2. **Added "Features" section**: Lists the main features of the application.
+3. **Added "Contributing" section**: Details how to contribute to the project.
+4. **Expanded "Setup Instructions" section**: Added instructions for adding your Firebase configuration in `environment.ts`.
+
+This updated `README.md` should help you and other developers get started with the project and understand its setup and features. If you have any questions or suggestions, feel free to ask!
+
+### File and Folder Structure
+
+Here is the full list of files and folders for the `README.md` and `src/environments`:
+search-git/
+├── .gitignore
+├── angular.json
+├── package.json
+├── README.md
+├── src/
+│ ├── app/
+│ │ ├── components/
+│ │ │ │──block/
+│ │ │ │ ├── block.component.ts
+│ │ │ │ ├── block.component.html
+│ │ │ │ ├── block.component.scss
+│ │ │ │──block-details/
+│ │ │ │ ├── block-details.component.ts
+│ │ │ │ ├── block-details.component.html
+│ │ │ │ ├── block-details.component.scss
+│ │ │ │──blocks/
+│ │ │ │ ├── blocks.component.ts
+│ │ │ │ ├── blocks.component.html
+│ │ │ │ ├── blocks.component.scss
+│ │ │ ├── login/
+│ │ │ │ ├── login.component.ts
+│ │ │ │ ├── login.component.html
+│ │ │ │ ├── login.component.scss
+│ │ │ ├── tables/
+│ │ │ │ ├── tables.component.ts
+│ │ │ │ ├── tables.component.html
+│ │ │ │ ├── tables.component.scss
+│ │ │ ├── UI/
+│ │ │ │ │ ├── form/
+│ │ │ │ │ │ ├── form.component.ts
+│ │ │ │ │ │ ├── form.component.html
+│ │ │ │ │ │ ├── form.component.scss
+│ │ │ │ │ ├── header/
+│ │ │ │ │ │ ├── header.component.ts
+│ │ │ │ │ │ ├── header.component.html
+│ │ │ │ │ │ ├── header.component.scss
+│ │ │ │ │ ├── input/
+│ │ │ │ │ │ ├── input.component.ts
+│ │ │ │ │ │ ├── input.component.html
+│ │ │ │ │ │ ├── input.component.scss
+│ │ ├── guards/
+│ │ │ ├── auth.guard.ts
+│ │ ├── services/
+│ │ │ ├── github.service.ts
+│ │ ├── app.component.ts
+│ │ ├── app.component.html
+│ │ ├── app.component.scss
+│ │ ├── app.config.ts
+│ │ ├── app.routes.ts
+│ ├── assets/
+│ ├── environments/
+│ │ └── environment.ts
+│ ├── main.ts
+│ ├── index.html
+│ ├── styles.scss
+├── .editorconfig
+├── .eslintrc.json
+├── tsconfig.json
+└── ...

@@ -9,5 +9,5 @@ import { RouterModule } from '@angular/router';
   styleUrl: './block.component.scss',
 })
 export class BlockComponent {
-  @Input() user: any = {};
+  @Input() searchedUser: any = {};
 }

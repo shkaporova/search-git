@@ -1,27 +1,44 @@
 <h1>GitHub Users Search</h1>
-<div class="bth-group">
-  <a
-    routerLink="/blocks"
-    [ngClass]="{
-      'btn-primary': isActive('/blocks'),
-      'btn-secondary': !isActive('/blocks')
-    }"
-    class="btn"
-    tabindex="-1"
-    role="button"
-    aria-disabled="true"
-    >Blocks</a
-  >
-  <a
-    routerLink="/tables"
-    [ngClass]="{
-      'btn-primary': isActive('/tables'),
-      'btn-secondary': !isActive('/tables')
-    }"
-    class="btn"
-    tabindex="-1"
-    role="button"
-    aria-disabled="true"
-    >Tables</a
-  >
+<div *ngIf="auth.currentUser" class="menu">
+  <div class="bth-group">
+    <a
+      routerLink="/blocks"
+      [ngClass]="{
+        'btn-primary': isActive('/blocks'),
+        'btn-secondary': !isActive('/blocks')
+      }"
+      class="btn d-flex align-items-center justify-content-center"
+      tabindex="-1"
+      role="button"
+      aria-disabled="true"
+      >Blocks</a
+    >
+    <a
+      routerLink="/tables"
+      [ngClass]="{
+        'btn-primary': isActive('/tables'),
+        'btn-secondary': !isActive('/tables')
+      }"
+      class="btn d-flex align-items-center justify-content-center"
+      tabindex="-1"
+      role="button"
+      aria-disabled="true"
+      >Tables</a
+    >
+  </div>
+  <div class="dropdown">
+    <button
+      class="btn btn-primary dropdown-toggle"
+      type="button"
+      id="dropdownMenuButton"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+    >
+      <img [src]="auth.currentUser.photoURL" class="avatar" />
+      <p>{{ auth.currentUser.displayName || auth.currentUser.email }}</p>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <li><a class="dropdown-item" (click)="logout()">Logout</a></li>
+    </ul>
+  </div>
 </div>

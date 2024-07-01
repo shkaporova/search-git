@@ -5,7 +5,7 @@
     <h2>Search Results: {{ users.length }} Users Found</h2>
     <div class="blocks">
       <ng-container *ngFor="let user of users">
-        <app-block [user]="user"></app-block>
+        <app-block [searchedUser]="user"></app-block>
       </ng-container>
     </div>
   </ng-container>

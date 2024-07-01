@@ -9,4 +9,27 @@
 .bth-group {
   display: flex;
   gap: 5px;
+  a {
+    height: 44px;
+  }
+}
+
+button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 5px;
+  img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  p {
+    margin: 0;
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
 }

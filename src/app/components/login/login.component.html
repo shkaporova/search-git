@@ -1,0 +1,35 @@
+<h2>Select the form for sign-in or registration</h2>
+<div class="btn-group" role="group" aria-label="Basic example">
+  <button
+    type="button"
+    [ngClass]="{ active: formMode === 'signIn' }"
+    class="btn btn-primary"
+    (click)="selectFormMode('signIn')"
+  >
+    Sign in
+  </button>
+  <button
+    type="button"
+    class="btn btn-primary"
+    [ngClass]="{ active: formMode === 'signUp' }"
+    (click)="selectFormMode('signUp')"
+  >
+    Sign up
+  </button>
+  <button
+    type="button"
+    class="btn btn-primary"
+    [ngClass]="{ active: formMode === 'github' }"
+    (click)="selectFormMode('github')"
+  >
+    Sign in with Github
+  </button>
+</div>
+<app-form
+  *ngIf="formMode === 'signIn' || formMode === 'signUp'"
+  [email]="email"
+  [password]="password"
+  [submitText]="getSubmitText()"
+  [onSubmit]="getSubmitMethod()"
+>
+</app-form>

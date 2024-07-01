@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './block-details.component.scss',
 })
 export class BlockDetailsComponent implements OnInit {
-  user: any;
+  searchedUser: any;
 
   constructor(
     private route: ActivatedRoute,
@@ -21,7 +21,7 @@ export class BlockDetailsComponent implements OnInit {
   ngOnInit(): void {
     const username = this.route.snapshot.paramMap.get('username')!;
     this.githubService.getUserDetails(username).subscribe((response: any) => {
-      this.user = response;
+      this.searchedUser = response;
     });
   }
 }
